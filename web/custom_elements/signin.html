@@ -3,6 +3,7 @@
 <link rel="import" href="packages/paper_elements/core_animated_pages.html">
 <link rel="import" href="packages/paper_elements/paper_input.html">
 <link rel="import" href="packages/paper_elements/paper_fab.html">
+<link rel="import" href="localized.html">
 
 <polymer-element name="signin-element">
 
@@ -33,7 +34,7 @@
       position: absolute;
     }
   </style>
-  
+
   <core-animated-pages selectedindex="0" notap id="core_animated_pages">
     <section id="section1" layout horizontal active center-justified center>
       <core-card id="core_card" layout vertical>
@@ -45,8 +46,8 @@
         <h2>{{labels['hello']}}</h2>
       </core-card>
     </section>
-  </core_animated_pages>
-  
+  </core-animated-pages>
+
   <localized-element id="l10n" locale={{locale}} labels={{labels}}></localized-element>
 
 </template>

@@ -8,27 +8,27 @@ import 'dart:convert';
 
 @CustomTag('localized-element')
 class Localized extends PolymerElement {
-  
+
   @published String locale = 'en';
   /*@published Map labels;*/
-  
+
   @PublishedProperty(reflect: true) Map labels;
-  
+
   Localized.created() : super.created();
-  
+
   ready() {
     super.ready();
     _loadTranslations();
   }
-  
+
   update() {
     if (!_l10n.containsKey(locale)) return;
-    
+
     var l10n = _l10n[locale];
 
     labels['hello'] = l10n['hello'];
   }
-  
+
   List locales = ['en', 'fr'];
   _loadTranslations() {
     locales.forEach((l10n)=> _loadLocale(l10n));
