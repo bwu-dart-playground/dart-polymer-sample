@@ -1,0 +1,4 @@
+[
+  {"icon": "settings", "label": "Sign in", "main_page": "signin-element"},
+  {"icon": "home", "label": "About", "main_page": "about-page-element"}
+]

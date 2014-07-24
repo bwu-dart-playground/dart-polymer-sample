@@ -1,0 +1,56 @@
+<link rel="import" href="packages/polymer/polymer.html">
+
+<link rel="import" href="packages/paper_elements/core_animated_pages.html">
+<link rel="import" href="packages/paper_elements/paper_input.html">
+<link rel="import" href="packages/paper_elements/paper_fab.html">
+
+<polymer-element name="signin-element">
+
+<template>
+  <style>
+    :host {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+    }
+    #core_card {
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
+      border-bottom-left-radius: 2px;
+      box-shadow: rgba(0, 0, 0, 0.0980392) 0px 2px 4px, rgba(0, 0, 0, 0.0980392) 0px 0px 3px;
+      padding: 14px;
+      background-color: rgb(255, 255, 255);
+      margin-top: 300px;
+    }
+    #section {
+      width: 420px;
+      height: 630px;
+      border: 5px solid rgb(204, 204, 204);
+      left: 180px;
+      top: 80px;
+      position: absolute;
+    }
+  </style>
+  
+  <core-animated-pages selectedindex="0" notap id="core_animated_pages">
+    <section id="section1" layout horizontal active center-justified center>
+      <core-card id="core_card" layout vertical>
+        <paper-input label="Your email addres" floatinglabel id="email_input"></paper-input>
+        <paper-input label="Your password" floatinglabel id="password_input"></paper-input>
+        <div id="div" layout horizontal end-justified>
+          <paper-fab icon="check" id="paper_fab"></paper-fab>
+        </div>
+        <h2>{{labels['hello']}}</h2>
+      </core-card>
+    </section>
+  </core_animated_pages>
+  
+  <localized-element id="l10n" locale={{locale}} labels={{labels}}></localized-element>
+
+</template>
+
+<script type="application/dart" src="signin.dart"></script>
+
+</polymer-element>

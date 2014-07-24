@@ -1,0 +1,33 @@
+<link rel="import" href="packages/polymer/polymer.html">
+
+<link rel="import" href="packages/core_elements/core_drawer_panel.html">
+<link rel="import" href="packages/core_elements/core_menu.html">
+<link rel="import" href="packages/core_elements/core_selector.html">
+<link rel="import" href="packages/core_elements/core_item.html">
+<link rel="import" href="packages/core_elements/core_icon.html">
+<link rel="import" href="packages/core_elements/core_icon_button.html">
+<link rel="import" href="packages/paper_elements/paper_icon_button.html">
+<link rel="import" href="packages/core_elements/core_toolbar.html">
+<link rel="import" href="packages/core_elements/core_header_panel.html">
+<link rel="import" href="packages/core_elements/core_scaffold.html">
+
+<polymer-element name="scaffold-toolbar-element">
+<template>
+  <core-scaffold>
+    <core-header-panel navigation flex mode="seamed">
+      <core-toolbar>My APP</core-toolbar>
+      <core-menu id="core_menu_item" theme="core-light-theme"></core-menu>
+    </core-header-panel>
+    
+    <div id="page_name" tool>Sign in</div>
+    <div id="main_page">
+    <signin-element></signin-element>
+    </div>
+
+  </core-scaffold>
+
+</template>
+
+<script type="application/dart" src="scaffold.dart"></script>
+
+</polymer-element>
